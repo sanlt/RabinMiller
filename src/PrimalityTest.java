@@ -6,14 +6,14 @@ public class PrimalityTest {
 
     private static void calculate(int n) {
         Scanner scanner = new Scanner(System.in);
-        double m = 0;
-        int k = 1;
         int i = 2;
-        double b0 = 0;
-        double res = 0;
+        int k = 1;
+        int r = 2;
         int x = 0;
         int z = 37;
-        int r = 2;
+        double m = 0;
+        double b0 = 0;
+        double res = 0;
         boolean prime = true;
 
         if (n <= 39) {
