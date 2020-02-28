@@ -40,11 +40,12 @@ public class PrimalityTestBigInteger {
                 // find k and m
                 m = (n.subtract(z1)).divide(i.pow(k));
 
-                while (m.remainder(i).compareTo(z0) == 0) {
+                while (m.remainder(i).equals(z0)) {
                     k++;
                     m = (n.subtract(z1)).divide(i.pow(k));
                 }
                 int mm = Integer.parseInt(m.toString());
+
                 // calculate b0
                 b0 = r.pow(mm).remainder(n);
 
@@ -63,12 +64,12 @@ public class PrimalityTestBigInteger {
                         b0 = res.remainder(n);
                         // i++;
                     }
-                    if (b0.compareTo(z1) == 0) {
+                    if (b0.equals(z1)) {
                         prime = false;
                         break;
                         //System.out.println(n + " --> is probably not a prime");
                     }
-                    if (b0.compareTo(minus1) == 0) {
+                    if (b0.equals(minus1)) {
                         continue;
                     }
                 }
